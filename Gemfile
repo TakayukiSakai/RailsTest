@@ -40,3 +40,8 @@ gem 'spring',        group: :development
 
 gem 'therubyracer'
 gem 'execjs'
+
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
+gem 'capistrano-bundler' # for capistrano/bundler
+gem 'capistrano-rails' # for capistrano/rails/*
+gem 'capistrano-ext'

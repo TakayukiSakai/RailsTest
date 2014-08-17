@@ -1,6 +1,9 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
+set :stages, ["development"]
+set :default_stage, "development"
+
 set :application, 'engineerplus'
 set :repo_url, 'git@github.com:TakayukiSakai/RailsTest.git'
 set :user, 'KAKY'
@@ -9,7 +12,7 @@ set :user, 'KAKY'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-# set :deploy_to, '/var/www/my_app'
+# set :deploy_to, '/media/sf_public_html/rails/engineerplus'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -33,7 +36,9 @@ set :user, 'KAKY'
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 3
+
+set :rbenv_ruby, '2.0.0-p481'
 
 namespace :deploy do
 
