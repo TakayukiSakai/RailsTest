@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140818052807) do
+ActiveRecord::Schema.define(version: 20140818081508) do
+
+  create_table "messages", force: true do |t|
+    t.integer  "room_id"
+    t.integer  "user_id"
+    t.text     "message"
+    t.datetime "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tweets", force: true do |t|
     t.string   "title"

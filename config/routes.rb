@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'messages/create'
+
   get 'tweets/index'
 
   get 'tweets/show'
